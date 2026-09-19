@@ -1,0 +1,19 @@
+import datetime
+
+def write_log(message, log_file="app.log"):
+    # Get current timestamp
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    log_entry = f"[{timestamp}] {message}\n"
+    
+    # Append the log to the file (creates it if it doesn't exist)
+    with open(log_file, "a", encoding="utf-8") as file:
+        file.write(log_entry)
+
+if __name__ == "__main__":
+    write_log("System started successfully.")
+    write_log("Warning: High memory usage detected.")
+    print("Log entries written to file.")
+#ALL THIS SCRIPT DOES IS CHECKING AND SAVING ERRORS OR EVENTS, ALSO DOES THIS IN APPEND MODE, TO MAKE SURE IT DOESNT DELETE ALL DATA FROM BEFORE
+#HOW TO RUN
+#INSTALL PYTHON AND START FILE, OR TEXT ME, WILL DO THAT FOR AROUND 25$ 
+#MY TELEGRAM: @Myhamed91
